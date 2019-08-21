@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_activity_search">Поиск</string>
+    <string name="title_activity_favorites">Избранное</string>
+
+    <string name="navigation_drawer_open">Открыть меню</string>
+    <string name="navigation_drawer_close">Закрыть меню</string>
+
+    <string name="simple_form_send">Отправить</string>
+
+    <string name="title_plan_image">План</string>
+
+    <string name="title_activity_choose_group">Выбрать выставку</string>
+    <string name="title_activity_about">О выставке</string>
+    <string name="title_activity_settings">Мои приложения</string>
+
+    <string name="error_cant_open_activity">Ошибка, невозможно открыть форму %s</string>
+    <string name="error_cant_load_org">Произошла ошибка при попытке загрузить %s</string>
+
+    <string name="ticket_load_text">Нажмите кнопку Получить для получения билета</string>
+    <string name="ticket_load_button">Получить</string>
+    <string name="caption_contact_phone">Телефон</string>
+    <string name="caption_contact_site">Сайт</string>
+    <string name="caption_contact_category">Категория</string>
+    <string name="caption_contact_email">Email</string>
+    <string name="caption_contact_vk">VK</string>
+    <string name="caption_contact_fb">FB</string>
+    <string name="caption_contact_inst">Instagram</string>
+    <string name="caption_contact_stand">Стенд</string>
+    <string name="settings_button_switch">Выбрать</string>
+    <string name="settings_button_settings">Настройки</string>
+    <string name="settings_button_preload">Загрузить</string>
+    <string name="settings_switch_visitor">Посетитель</string>
+    <string name="settings_switch_presenter">Участник</string>
+    <string name="settings_button_remove">Удалить группу</string>
+    <string name="settings_button_clean">Очистить</string>
+    <string name="message_org_cache_clean_complete">Очистка завершена</string>
+    <string name="message_org_preload_complete">Загрузка изображений завершена</string>
+    <string name="caption_preload_image">Загружайте изображения для просмотра при отсутствии интернета</string>
+    <string name="message_data_is_loading">Загрузка…</string>
+    <string name="message_group_deleting">Удаление…</string>
+    <string name="message_form_sent">Форма успешно отправлена</string>
+    <string name="error_field_is_required">Поле %s обязательно для заполнения</string>
+    <string name="member_list_all">&lt;Все&gt;</string>
+    <string name="setting_group_delete">Настройки выставки будут удалены</string>
+    <string name="button_yes">Да</string>
+    <string name="button_no">Нет</string>
+    <string name="settings_button_add">Каталог</string>
+    <string name="settings_add_text_inputcode">Введите код</string>
+    <string name="title_activity_org_add">Каталог</string>
+    <string name="settings_add_group_not_found">Код не найден</string>
+    <string name="settings_add_or">или</string>
+    <string name="settings_add_scan_qr">Отсканируйте QR код</string>
+    <string name="settings_add_choose">Выберите из списка</string>
+    <string name="title_activity_qrscan">Сканирование QR кода</string>
+    <string name="title_choose_city">Выберите город</string>
+    <string name="text_how_to_add_app">Добавьте нужное в Мои приложения нажатием на картинку</string>
+    <string name="text_press_catalog">Полный список приложений смотрите нажав на КАТАЛОГ</string>
+
+</resources>

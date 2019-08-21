@@ -1,0 +1,23 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="ic_menu_address" type="drawable">@drawable/address</item>
+    <item name="ic_menu_discounts" type="drawable">@drawable/discounts</item>
+    <item name="ic_menu_entry" type="drawable">@drawable/entry</item>
+    <item name="ic_menu_exhibition" type="drawable">@drawable/exhibition</item>
+    <item name="ic_menu_exhibitions" type="drawable">@drawable/exhibitions</item>
+    <item name="ic_menu_exhibitor" type="drawable">@drawable/exhibitor</item>
+    <item name="ic_menu_favorites" type="drawable">@drawable/favorites</item>
+    <item name="ic_menu_news" type="drawable">@drawable/news</item>
+    <item name="ic_menu_partners" type="drawable">@drawable/partners</item>
+    <item name="ic_menu_photogallery" type="drawable">@drawable/photogallery</item>
+    <item name="ic_menu_plan" type="drawable">@drawable/plan</item>
+    <item name="ic_menu_question" type="drawable">@drawable/question</item>
+    <item name="ic_menu_search" type="drawable">@drawable/search</item>
+    <item name="ic_menu_setting" type="drawable">@drawable/setting</item>
+    <item name="ic_menu_tickets" type="drawable">@drawable/tickets</item>
+
+    <item name="ic_button_like" type="drawable">@drawable/like</item>
+    <item name="ic_button_liked" type="drawable">@drawable/liked</item>
+
+
+</resources>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.gastroafisha.MyApps">
+
+    <!-- <permission android:name="com.example.permission.MAPS_RECEIVE" android:protectionLevel="signature" /> -->
+    <!-- <uses-permission android:name="com.example.permission.MAPS_RECEIVE" /> -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- uses-feature android:name="android.hardware.camera" android:required="true" /> -->
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!--
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        -->
+
+        <service android:name=".Utils.Services.InformerFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Utils.Services.InformerFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.Single.AboutActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.OrgsActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.OrgAddActivity"
+            android:label="@string/title_activity_org_add"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.SettingsListActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Single.UrlActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SettingsListActivity"
+            android:label="@string/title_activity_settings"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SettingsShowActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogItemListActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogItemShowActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogMemberItemListActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogMemberShowActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogNewsItemListActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogNewsShowActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogImageItemListActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Catalog.CatalogImageShowActivity"
+            android:label="@string/title_empty"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Single.MapActivity"
+            android:label="@string/title_activity_map"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Single.TicketActivity"
+            android:label="@string/title_activity_ticket"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Single.PlanActivity"
+            android:label="@string/title_activity_map"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Special.SearchCatalogActivityItem"
+            android:label="@string/title_activity_search"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Item.Special.FavoritesCatalogActivityItem"
+            android:label="@string/title_activity_favorites"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.Form.SimpleFormActivity"
+            android:label="@string/title_activity_simple_form"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+        <activity android:name=".Activity.QRScanActivity"
+            android:label="@string/title_activity_qrscan"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.gastroafisha.MyApps.Activity.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
